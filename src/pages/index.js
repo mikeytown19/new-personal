@@ -8,11 +8,9 @@ const IndexPage = () => (
     <Background >
       <Header />
       <Container paddingTop="150px">
-
       </Container>
     </Background>
     <Background reverse="true">
-
     </Background>
   </Layout>
 )
