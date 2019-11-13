@@ -4,11 +4,13 @@ import {Layout} from './layout'
 import Image from "../components/image"
 import SEO from "../components/seo"
 import {Header} from '../components/header'
+import {Hero} from '../components/hero'
 export {
   Background,
   Container,
   Layout,
   Image,
   SEO,
-  Header
+  Header,
+  Hero
 }

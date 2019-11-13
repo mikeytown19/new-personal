@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import {Container, Background, Layout, Header} from '../components'
+import {Container, Background, Layout, Header, Hero} from '../components'
 import styled from '@emotion/styled'
 
 const IndexPage = () => (
@@ -8,6 +8,8 @@ const IndexPage = () => (
     <Background >
       <Header />
       <Container paddingTop="150px">
+       <Hero />
+
       </Container>
     </Background>
     <Background reverse="true">
