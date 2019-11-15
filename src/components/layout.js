@@ -14,12 +14,16 @@ import {GlobalStyles} from '../styles/global'
 export const Layout = ({ children }) => {
 
   return (
-    <div>
+    <LayoutStyles>
       <GlobalStyles />
 
         {children}
 
-    </div>
+    </LayoutStyles>
   )
 }
 
+
+const LayoutStyles = styled.div`
+  position: relative;
+`

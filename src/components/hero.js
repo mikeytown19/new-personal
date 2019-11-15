@@ -1,17 +1,28 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import {theme} from '../styles/theme'
+import { motion } from "framer-motion"
 
 
 const {colors, gradient} = theme
 
+
 export const Hero = () => {
+
   return (
 
     <HeroContainer>
-      <h1>I'm Mike</h1>
+      <div className='exampleContainer'>
 
-      <h6>(I like to build stuff)</h6>
+        <motion.div
+            animate={{
+              scale: [.8, 1.2, 1]
+            }}>
+          <h1>I'm Mike</h1>
+          <h6>(I like to build stuff)</h6>
+        </motion.div>
+      </div>
+
       </HeroContainer>
 
   )
@@ -25,6 +36,12 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
+
+.exampleContainer {
+  text-align: center;
+}
+
+
 
 h1 {
   margin-top: -75px;

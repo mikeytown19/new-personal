@@ -5,6 +5,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import {Header} from '../components/header'
 import {Hero} from '../components/hero'
+import {Example} from '../components/navigation/example'
 export {
   Background,
   Container,
@@ -12,5 +13,6 @@ export {
   Image,
   SEO,
   Header,
-  Hero
+  Hero,
+  Example
 }
