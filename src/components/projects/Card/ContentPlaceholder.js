@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { LoremIpsum } from "react-lorem-ipsum";
 import { motion, useInvertedScale } from "framer-motion";
 

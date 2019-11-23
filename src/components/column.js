@@ -5,10 +5,9 @@ import Image from './image'
 const {colors} = theme
 
 export const Column =  ({children, src, beforeContent}) => {
-  console.log(children, src)
   return (
     <ColumnStyles>
-    {beforeContent && <h2>{beforeContent}</h2>}
+    {beforeContent ? <h2>{beforeContent}</h2> : null}
       <div className='flex'>
         {children}
         <Image src={src} />

@@ -14,7 +14,6 @@ import Img from "gatsby-image"
  */
 
 const Image = ({src, data}) => {
-  console.log(src, data)
   let imageSrc = data.allFile.edges.find(({node}) => {
     if (node.childImageSharp) {
       return src ===  node.childImageSharp.fluid.originalName

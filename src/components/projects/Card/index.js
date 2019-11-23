@@ -1,5 +1,4 @@
-import * as React from "react";
-import { memo, useRef } from "react";
+import  React, { memo, useRef } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useInvertedBorderRadius } from "../utils/use-inverted-border-radius";
