@@ -22,7 +22,7 @@ const IndexPage = () => (
 
 
     <Background transparent>
-      <Projects />
+      <Projects ></Projects>
     </Background>
 
   </Layout>
