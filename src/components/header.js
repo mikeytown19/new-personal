@@ -13,7 +13,7 @@ export const Header = () => (
   <StyledHeader>
     <HeaderContainer>
         <div>
-          <Link to="/">
+          <Link to="/mikes">
             <img src={Logo} alt=''/>
           </Link>
 
