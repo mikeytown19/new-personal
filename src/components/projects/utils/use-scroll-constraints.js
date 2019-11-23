@@ -13,7 +13,7 @@ export function useScrollConstraints(ref, measureConstraints) {
     if (!measureConstraints) return;
 
     const element = ref.current;
-    const viewportHeight = window.innerHeight;
+    const viewportHeight = ref.current.offsetHeight + 100;
     const contentTop = element.offsetTop;
     const contentHeight = element.offsetHeight;
     const scrollableViewport = viewportHeight - contentTop * 2;
