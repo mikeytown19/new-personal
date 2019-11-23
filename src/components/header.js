@@ -19,6 +19,8 @@ export const Header = ({ siteTitle }) => (
 
         </div>
 
+        <Example />
+
     </HeaderContainer>
 
   </StyledHeader>
@@ -34,6 +36,7 @@ const HeaderContainer = styled.div`
     max-width: 1200px;
     margin: auto;
     padding-top: 20px;
+
 `
 
 

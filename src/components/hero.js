@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import {theme} from '../styles/theme'
 import { motion } from "framer-motion"
+import ScrollDown from '../images/scrolldown.svg'
 
 
 const {colors, gradient} = theme
@@ -21,7 +22,9 @@ export const Hero = () => {
           <h1>I'm Mike</h1>
           <h6>(I like to build stuff)</h6>
         </motion.div>
+
       </div>
+        <Img src={ScrollDown} alt=''/>
 
       </HeroContainer>
 
@@ -33,7 +36,7 @@ const HeroContainer = styled.div`
 min-height: 60vh;
 margin: auto;
 display: flex;
-justify-content: center;
+justify-content: space-around;
 align-items: center;
 flex-direction: column;
 
@@ -53,4 +56,8 @@ h1, h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+`
+
+const Img = styled.img`
+  padding-top: 0px;
 `

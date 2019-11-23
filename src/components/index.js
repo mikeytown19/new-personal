@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import {Header} from '../components/header'
 import {Hero} from '../components/hero'
 import {Example} from '../components/navigation/example'
+import {Column} from '../components/column'
 export {
   Background,
   Container,
@@ -14,5 +15,6 @@ export {
   SEO,
   Header,
   Hero,
-  Example
+  Example,
+  Column
 }

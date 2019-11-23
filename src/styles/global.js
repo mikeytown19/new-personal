@@ -23,9 +23,17 @@ export const GlobalStyles = () => (
       font-size: 64px;
     }
 
+    h2 {
+      font-size: 52px;
+    }
+
     h6 {
       font-size: 24px;
       margin: 0;
+    }
+
+    p {
+      font-size: 18px;
     }
 
 
