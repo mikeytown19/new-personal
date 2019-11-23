@@ -2,8 +2,8 @@ import React from 'react'
 import styled from '@emotion/styled'
 import {theme} from '../styles/theme'
 import Image from './image'
+const {colors} = theme
 
-const {colors, gradient} = theme
 export const Column =  ({children, src, beforeContent}) => {
   console.log(children, src)
   return (

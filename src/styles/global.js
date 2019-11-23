@@ -8,6 +8,12 @@ export const GlobalStyles = () => (
 
   @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap');
 
+  * {
+  box-sizing: border-box;
+  font-family: ".SFNSText", "SFProText-Regular", "SFUIText-Regular", ".SFUIText",
+    Helvetica, Arial, sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
   html, body {
     margin: 0;
@@ -15,9 +21,7 @@ export const GlobalStyles = () => (
     font-family: 'Montserrat', sans-serif;
   }
 
-  * {
-      box-sizing: border-box;
-    }
+
 
     h1 {
       font-size: 64px;
@@ -25,6 +29,10 @@ export const GlobalStyles = () => (
 
     h2 {
       font-size: 52px;
+    }
+
+    h3 {
+      font-size: 36px;
     }
 
     h6 {

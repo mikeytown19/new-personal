@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import ScrollDown from '../images/scrolldown.svg'
 
 
-const {colors, gradient} = theme
+const {colors} = theme
 
 
 export const Hero = () => {

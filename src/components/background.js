@@ -8,7 +8,7 @@ const {colors, gradient} = theme
 export const Background = ({children, reverse, transparent}) => {
     return (
       <GradientBG reverse={reverse}>
-        <GradientInsideWhite>
+        <GradientInsideWhite transparent={transparent}>
         {children}
         </GradientInsideWhite>
       </GradientBG>
@@ -26,6 +26,6 @@ background: ${props =>
 `
 
 const GradientInsideWhite = styled.div`
-background-color: ${colors.white};
+background-color: ${props => props.transparent ? 'transparent' : colors.white };
 height: 10%;
 `

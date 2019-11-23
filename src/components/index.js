@@ -7,6 +7,7 @@ import {Header} from '../components/header'
 import {Hero} from '../components/hero'
 import {Example} from '../components/navigation/example'
 import {Column} from '../components/column'
+import {Projects} from '../components/projects/projects'
 export {
   Background,
   Container,
@@ -16,5 +17,6 @@ export {
   Header,
   Hero,
   Example,
-  Column
+  Column,
+  Projects
 }

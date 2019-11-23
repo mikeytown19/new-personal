@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
-import {Container, Background, Layout, Header, Hero, Example, Column} from '../components'
-import styled from '@emotion/styled'
+
+import {Container, Background, Layout, Header, Hero, Column, Projects} from '../components'
+
 
 const IndexPage = () => (
   <Layout>
@@ -18,6 +18,11 @@ const IndexPage = () => (
         <p>I’m a full stack Web/Ux Developer. My belief is that a good project is defined by the experience of it’s clients. My passion is to make these experiences better and more beautiful.</p>
         </Column>
       </Container>
+    </Background>
+
+
+    <Background transparent>
+      <Projects />
     </Background>
 
   </Layout>

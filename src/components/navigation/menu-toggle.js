@@ -1,10 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 
-import {theme} from '../../styles/theme'
-
-const {gradient} = theme
-
 const Path = props => (
   <motion.path
     fill="transparent"

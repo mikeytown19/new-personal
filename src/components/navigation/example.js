@@ -7,7 +7,7 @@ import { Navigation } from "./navigation";
 import styled from '@emotion/styled'
 import { theme } from '../../styles/theme'
 
-const { colors, gradient } = theme;
+const { gradient } = theme;
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 259px 40px)`,

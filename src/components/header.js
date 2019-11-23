@@ -1,15 +1,15 @@
-import React, {useState, useEffect} from "react"
+import React from "react"
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
+
 import styled from '@emotion/styled'
-import {theme} from '../styles/theme'
+
 import Logo from '../images/logo.svg'
-import { motion } from 'framer-motion'
+
 import { Example } from "./navigation/example";
 
-const {colors, maxWidth} = theme;
 
-export const Header = ({ siteTitle }) => (
+
+export const Header = () => (
   <StyledHeader>
     <HeaderContainer>
         <div>
