@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { Card } from "./Card";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
