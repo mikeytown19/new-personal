@@ -3,6 +3,7 @@ import { CardList } from "./CardList";
 import styled from '@emotion/styled'
 
 export const Projects = () => {
+  console.log(CardList)
   return (
     <StyledProjects>
       <CardList />

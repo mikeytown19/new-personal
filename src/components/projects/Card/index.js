@@ -1,6 +1,6 @@
 import  React, { memo, useRef } from "react";
 import { motion, useMotionValue } from "framer-motion";
-import { Link } from "gatsby";
+import { Link } from "react-router-dom";
 import { useInvertedBorderRadius } from "../utils/use-inverted-border-radius";
 import { ContentPlaceholder } from "./ContentPlaceholder";
 import { Title } from "./Title";
@@ -80,7 +80,7 @@ export const Card = memo(
             <ContentPlaceholder />
           </motion.div>
         </div>
-        {!isSelected && <Link to={id} className={`card-open-link`} />}
+        {!isSelected && <Link to={id} className="card-open-link" />}
       </li>
     );
   },

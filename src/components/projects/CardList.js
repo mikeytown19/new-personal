@@ -1,6 +1,5 @@
-import React from "react";
+import  React from "react";
 import { Card } from "./Card";
-import { Link } from 'gatsby'
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -21,9 +20,9 @@ const List = ({ match, history }) => (
 );
 
 export const CardList = () => (
-  <div>
-    <Link to='/' />
-  </div>
+  <Router>
+    <Route path={["/:id", "/"]} component={List} />
+  </Router>
 );
 
 
