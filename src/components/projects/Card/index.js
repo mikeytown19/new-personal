@@ -1,6 +1,6 @@
 import  React, { memo, useRef } from "react";
 import { motion, useMotionValue } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link } from "gatsby";
 import { useInvertedBorderRadius } from "../utils/use-inverted-border-radius";
 import { ContentPlaceholder } from "./ContentPlaceholder";
 import { Title } from "./Title";
