@@ -3,7 +3,6 @@ import { CardList } from "./CardList";
 import styled from '@emotion/styled'
 
 export const Projects = () => {
-  console.log(CardList)
   return (
     <StyledProjects>
       <CardList />
@@ -152,6 +151,7 @@ li {
   left: 0;
   right: 0;
   bottom: 0;
+  cursor: pointer;
 }
 
 .card-image-container {
@@ -189,6 +189,7 @@ li {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+  overflow: auto;
 
 }
 

@@ -1,6 +1,6 @@
-import  React, { memo, useRef } from "react";
+import  React, { memo, useRef, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link } from "@reach/router";
 import { useInvertedBorderRadius } from "../utils/use-inverted-border-radius";
 import { ContentPlaceholder } from "./ContentPlaceholder";
 import { Title } from "./Title";
@@ -10,37 +10,37 @@ import { useScrollConstraints } from "../utils/use-scroll-constraints";
 import { useWheelScroll } from "../utils/use-wheel-scroll";
 // Distance in pixels a user has to scroll a card down before we recognise
 // a swipe-to dismiss action.
-const dismissDistance = 150;
+const dismissDistance = 100;
 
 export const Card = memo(
   ({
-    isSelected,
     id,
     title,
     category,
-    history,
     pointOfInterest,
     backgroundColor,
     src
   }) => {
+    const [opened, updateOpened] = useState(false);
+
     const y = useMotionValue(0);
-    const zIndex = useMotionValue(isSelected ? 2 : 0);
+    const zIndex = useMotionValue(opened ? 2 : 0);
 
     // Maintain the visual border radius when we perform the layoutTransition by inverting its scaleX/Y
     const inverted = useInvertedBorderRadius(20);
 
     // We'll use the opened card element to calculate the scroll constraints
     const cardRef = useRef(null);
-    const constraints = useScrollConstraints(cardRef, isSelected);
-
+    const constraints = useScrollConstraints(cardRef, opened);
     function checkSwipeToDismiss() {
-      y.get() > dismissDistance && history.push("/");
+
+      y.get() > dismissDistance &&  updateOpened(!opened);
     }
 
     function checkZIndex(latest) {
-      if (isSelected) {
+      if (opened) {
         zIndex.set(2);
-      } else if (!isSelected && latest.scaleX < 1.01) {
+      } else if (!opened && latest.scaleX < 1.01) {
         zIndex.set(0);
       }
     }
@@ -52,19 +52,19 @@ export const Card = memo(
       y,
       constraints,
       checkSwipeToDismiss,
-      isSelected
+      opened
     );
 
     return (
       <li ref={containerRef} className={`card`}>
-        <Overlay isSelected={isSelected} />
-        <div className={`card-content-container ${isSelected && "open"}`}>
+        <Overlay isSelected={opened} updateOpened={updateOpened} />
+        <div className={`card-content-container ${opened && "open"}`}>
           <motion.div
             ref={cardRef}
             className="card-content"
             style={{ ...inverted, zIndex, y }}
-            layoutTransition={isSelected ? openSpring : closeSpring}
-            drag={isSelected ? "y" : false}
+            layoutTransition={opened ? openSpring : closeSpring}
+            drag={opened ? "y" : false}
             dragConstraints={constraints}
             onDrag={checkSwipeToDismiss}
             onUpdate={checkZIndex}
@@ -72,29 +72,32 @@ export const Card = memo(
             <Image
               id={id}
               src={src}
-              isSelected={isSelected}
+              isSelected={opened}
               pointOfInterest={pointOfInterest}
               backgroundColor={backgroundColor}
+              updateOpened={updateOpened}
             />
-            <Title title={title} category={category} isSelected={isSelected} />
+            <Title title={title} category={category} isSelected={opened} />
             <ContentPlaceholder />
           </motion.div>
         </div>
-        {!isSelected && <Link to={id} className="card-open-link" />}
+         <div onClick={() => {
+          updateOpened(!opened)
+        }} className="card-open-link"></div>
       </li>
     );
-  },
-  (prev, next) => prev.isSelected === next.isSelected
+  }
 );
 
-const Overlay = ({ isSelected }) => (
+const Overlay = ({ isSelected, updateOpened }) => (
   <motion.div
+    onClick={()=>updateOpened(!isSelected)}
     initial={false}
     animate={{ opacity: isSelected ? 1 : 0 }}
     transition={{ duration: 0.2 }}
     style={{ pointerEvents: isSelected ? "auto" : "none" }}
     className="overlay"
   >
-    <Link to="/" />
+
   </motion.div>
 );

@@ -3,27 +3,23 @@ import { Card } from "./Card";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-const List = ({ match, history }) => (
-  <div className='projects'>
-      <ul className="card-list">
-    {cardData.map(card => (
-      <Card
-        key={card.id}
-        isSelected={match.params.id === card.id}
-        history={history}
-        {...card}
-      />
-    ))}
-  </ul>
-  </div>
+export const CardList = () => {
+  return (
+    <div className='projects'>
+        <ul className="card-list">
+      {cardData.map(card => {
+        return (
+          <Card
+            key={card.id}
+            {...card}
+          />
+        )
+      })}
+    </ul>
+    </div>
 
-);
-
-export const CardList = () => (
-  <Router>
-    <Route path={["/:id", "/"]} component={List} />
-  </Router>
-);
+  );
+}
 
 
 const cardData = [

@@ -11,12 +11,13 @@ export function useScrollConstraints(ref, measureConstraints) {
 
   useEffect(() => {
     if (!measureConstraints) return;
+    console.log(measureConstraints)
 
     const element = ref.current;
-    const viewportHeight = ref.current.offsetHeight + 100;
+    const viewportHeight = ref.current.offsetHeight - 500;
     const contentTop = element.offsetTop;
     const contentHeight = element.offsetHeight;
-    const scrollableViewport = viewportHeight - contentTop * 2;
+    const scrollableViewport = viewportHeight + contentTop * 2;
     const top = Math.min(scrollableViewport - contentHeight, 0);
 
     setConstraints({ top, bottom: 0 });
