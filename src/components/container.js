@@ -1,7 +1,8 @@
 
 import React from 'react'
 import styled from '@emotion/styled'
-import {theme} from '../styles/theme'
+import {theme} from '../styles'
+console.log(theme)
 
 const {maxWidth} = theme;
 export const Container = ({children, paddingTop}) => {
@@ -19,9 +20,6 @@ const ContainerWrapper = styled.div`
   background-color: white;
   margin: auto;
   padding-top: ${props => props.paddingTop ? props.paddingTop : '20px'};
-
-
   position: relative;
-
 
 `

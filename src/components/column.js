@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import {theme} from '../styles/theme'
+import {theme, media} from '../styles'
 import Image from './image'
 const {colors} = theme
 
@@ -26,8 +26,8 @@ const ColumnStyles = styled.div`
       p {
         max-width: 500px;
         padding-top: 50px;
-
       }
+
     }
 
     h2 {
