@@ -123,7 +123,7 @@ li {
   left: 0;
   right: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   overflow: hidden;
   padding: 40px 0;
 }
@@ -180,7 +180,7 @@ li {
 }
 
 .overlay {
-  z-index: 1;
+  z-index: 1000;
   position: fixed;
   background: rgba(0, 0, 0, 0.8);
   will-change: opacity;
