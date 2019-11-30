@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled'
 import {theme, media} from '../styles'
-
-console.log(media)
 const {colors, gradient} = theme
 
 export const Background = ({children, reverse, transparent}) => {

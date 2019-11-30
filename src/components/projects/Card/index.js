@@ -1,6 +1,5 @@
 import  React, { memo, useRef, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
-import { Link } from "@reach/router";
 import { useInvertedBorderRadius } from "../utils/use-inverted-border-radius";
 import { ContentPlaceholder } from "./ContentPlaceholder";
 import { Title } from "./Title";

@@ -24,4 +24,5 @@ export const Layout = ({ children }) => {
 
 const LayoutStyles = styled.div`
   position: relative;
+  overflow: auto;
 `

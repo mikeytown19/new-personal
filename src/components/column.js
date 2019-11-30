@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import {theme, media} from '../styles'
+import {theme} from '../styles'
 import Image from './image'
 const {colors} = theme
 
