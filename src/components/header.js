@@ -43,10 +43,16 @@ const HeaderContainer = styled.div`
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    padding: 20px 0;
+    padding: 20px;
 
     ${media.medium} {
       padding: 20px;
+    }
+
+    ${media.small} {
+      img {
+        max-width: 75px;
+      }
     }
 
 `

@@ -41,7 +41,7 @@ const HamburgerStyles = styled.div`
       width: 35px;
       height: 5px;
       background-color:  ${props =>
-      props.scrolled ? '#3e5f77' : '#3e5f77'};
+      props.scrolled ? '#3e5f77' : '#FE7BA4'};
       margin: 6px 0;
       transition: 0.4s;
     }
