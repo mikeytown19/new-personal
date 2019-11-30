@@ -3,8 +3,10 @@ import { motion, useMotionValue } from "framer-motion";
 import { useInvertedBorderRadius } from "../utils/use-inverted-border-radius";
 import { ContentPlaceholder } from "./ContentPlaceholder";
 import { Title } from "./Title";
-import { Image } from "./Image";
+import { CardImage } from "./cardImage";
+import Image from '../../image'
 import { openSpring, closeSpring } from "./animations";
+import styled from '@emotion/styled'
 import { useScrollConstraints } from "../utils/use-scroll-constraints";
 import { useWheelScroll } from "../utils/use-wheel-scroll";
 // Distance in pixels a user has to scroll a card down before we recognise
@@ -18,10 +20,11 @@ export const Card = memo(
     category,
     pointOfInterest,
     backgroundColor,
-    src
+    src,
+    body,
+    href
   }) => {
     const [opened, updateOpened] = useState(false);
-
     const y = useMotionValue(0);
     const zIndex = useMotionValue(opened ? 2 : 0);
 
@@ -68,7 +71,7 @@ export const Card = memo(
             onDrag={checkSwipeToDismiss}
             onUpdate={checkZIndex}
           >
-            <Image
+            <CardImage
               id={id}
               src={src}
               isSelected={opened}
@@ -77,7 +80,14 @@ export const Card = memo(
               updateOpened={updateOpened}
             />
             <Title title={title} category={category} isSelected={opened} />
-            <ContentPlaceholder />
+            <ContentPlaceholder body={body} src={src}/>
+            <ImageContainer>
+                <a href={href} target="_blank">
+                  <Image src={src} />
+                </a>
+            </ImageContainer>
+
+
           </motion.div>
         </div>
          <div onClick={() => {
@@ -100,3 +110,13 @@ const Overlay = ({ isSelected, updateOpened }) => (
 
   </motion.div>
 );
+
+
+const ImageContainer = styled.div`
+
+
+  .gatsby-image-wrapper {
+    max-width: 300px;
+    margin: 0 auto 40px;
+  }
+`

@@ -2,7 +2,7 @@ import  React from "react";
 import { motion, useInvertedScale } from "framer-motion";
 import { closeSpring } from "./animations";
 
-export const Image = ({
+export const CardImage = ({
   id,
   isSelected,
   pointOfInterest = 0,
@@ -18,9 +18,7 @@ export const Image = ({
     >
       <motion.img
         className="card-image"
-        src={`../../../images/${id}.jpg`}
         alt=""
-
         initial={false}
         animate={
           isSelected ? { x: -20, y: -20 } : { x: -pointOfInterest, y: 0 }
