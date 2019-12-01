@@ -5,10 +5,10 @@ import {theme} from '../styles'
 console.log(theme)
 
 const {maxWidth} = theme;
-export const Container = ({children, paddingTop}) => {
+export const Container = ({children, paddingTop, noBg}) => {
 
   return (
-    <ContainerWrapper paddingTop={paddingTop}>
+    <ContainerWrapper noBg={noBg} paddingTop={paddingTop}>
       {children}
 
     </ContainerWrapper>
@@ -17,7 +17,7 @@ export const Container = ({children, paddingTop}) => {
 
 const ContainerWrapper = styled.div`
   max-width: ${maxWidth};
-  background-color: white;
+  background-color: ${props => props.noBg ? "transparent" : "white"};
   margin: auto;
   padding-top: ${props => props.paddingTop ? props.paddingTop : '20px'};
   position: relative;

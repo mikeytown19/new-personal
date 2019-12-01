@@ -31,6 +31,11 @@ export const Header = ({isActive, toggleActive}) => (
 const StickyStyles=styled(Sticky)`
 z-index: 1000;
 background: white;
+transition: border-bottom .3s;
+
+&.sticky {
+  border-bottom: solid tomato 2px;
+}
 `
 const StyledHeader = styled.header`
   background: white;
@@ -40,6 +45,7 @@ const StyledHeader = styled.header`
 const HeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     max-width: 1200px;
     margin: auto;

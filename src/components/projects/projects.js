@@ -1,6 +1,7 @@
 import React from "react";
 import { CardList } from "./CardList";
 import styled from '@emotion/styled'
+import { media}  from '../../styles'
 
 export const Projects = () => {
   return (
@@ -170,6 +171,10 @@ li {
   left: 0;
   max-width: 300px;
   text-align: left;
+
+  ${media.small} {
+    max-width: 240px;
+  }
 }
 
 
@@ -232,15 +237,17 @@ p {
 @media only screen and (max-width: 600px) {
   .card {
     flex: 1 0 100%;
-    max-width: 100%;
+    max-width: 80%;
     padding-left: 0;
     padding-right: 0;
+    margin: auto;
   }
 
   .card:nth-of-type(4n + 1),
   .card:nth-of-type(4n + 4) {
     flex: 1 0 100%;
-    max-width: 100%;
+    max-width: 80%;
+    margin: auto;
   }
 
   .card-content-container.open {

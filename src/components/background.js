@@ -16,9 +16,12 @@ export const Background = ({children, reverse, transparent}) => {
 
 const GradientBG = styled.div`
 
+h2 {
+  text-align: center;
+  color: white;
+}
 position: relative;
-padding: 30px;
-min-height: 50vh;
+padding: 30px 0;
 background: ${props =>
    props.reverse ? gradient.reverse : gradient.default };
 
@@ -30,4 +33,6 @@ background: ${props =>
 const GradientInsideWhite = styled.div`
 background-color: ${props => props.transparent ? 'transparent' : colors.white };
 height: 10%;
+color: white;
+
 `

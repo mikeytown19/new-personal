@@ -27,25 +27,36 @@ const IndexPage = () => {
             transition={{ease: 'easeOut', duration: .3}}
           >
             <div>
-              <h2>Item</h2>
-              <h2>Item</h2>
-              <h2>Item</h2>
-              <h2>Item</h2>
-              <h2>Item</h2>
+              <h3>Home</h3>
+              <h3>About</h3>
+              <h3>Projects</h3>
+              <h3>Experience</h3>
+              <h3>Contact</h3>
             </div>
           </MotionDiv>
       </Background>
       <Background reverse="true">
         <Container>
           <Column beforeContent="About Me" src="about-me.png">
-          <p>I’m a full stack Web/Ux Developer. My belief is that a good project is defined by the experience of it’s clients. My passion is to make these experiences better and more beautiful.</p>
+          <p className="gradeintP">I’m a full stack Web/Ux Developer. My belief is that a good project is defined by the experience of it’s clients. My passion is to make these experiences better and more beautiful.</p>
           </Column>
         </Container>
       </Background>
 
 
       <Background transparent>
+        <h2>Projects</h2>
         <Projects ></Projects>
+      </Background>
+
+
+      <Background transparent reverse="true">
+        <Container noBg="true">
+          <Column  reverse="true" src="contactme.png">
+          <h2>Contact Me</h2>
+
+          </Column>
+        </Container>
       </Background>
 
     </Layout>
@@ -65,17 +76,27 @@ const MotionDiv = styled(motion.div)`
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  text-align: center;
   top: 137px;
 
-  h2 { display: none;}
+  h3 { display: none;}
 
   &.active {
     height: 100vh;
     width: 100%;
 
-    h2 {
+    h3 {
       display: block;
       cursor: pointer;
+      color: white;
+      margin: 20px;
+      border-bottom: none;
+      transition: .2s;
+
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 
