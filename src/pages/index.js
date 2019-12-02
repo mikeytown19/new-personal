@@ -1,9 +1,9 @@
 import React, {useState} from "react"
 
-import {Container, Background, Layout, Header, Hero, Column, Projects} from '../components'
+import {Container, Background, Layout, Header, Hero, Column, Projects, Form} from '../components'
 import {motion} from 'framer-motion'
 import styled from '@emotion/styled'
-import {theme} from '../styles'
+import {theme, media} from '../styles'
 
 const {gradient} = theme
 
@@ -45,7 +45,7 @@ const IndexPage = () => {
 
 
       <Background transparent>
-        <h2>Projects</h2>
+        <H2>Projects</H2>
         <Projects ></Projects>
       </Background>
 
@@ -54,6 +54,7 @@ const IndexPage = () => {
         <Container noBg="true">
           <Column  reverse="true" src="contactme.png">
           <h2>Contact Me</h2>
+          <Form />
 
           </Column>
         </Container>
@@ -65,6 +66,12 @@ const IndexPage = () => {
 
 export default IndexPage
 
+
+const H2 = styled.h2`
+  ${media.small} {
+    padding-top: 50px;
+  }
+`
 
 
 const MotionDiv = styled(motion.div)`
