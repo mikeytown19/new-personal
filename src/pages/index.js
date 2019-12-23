@@ -45,8 +45,11 @@ const IndexPage = () => {
 
 
       <Background transparent>
+        <Container  noBg="true">
         <H2>Projects</H2>
         <Projects ></Projects>
+        </Container>
+
       </Background>
 
 
@@ -84,7 +87,7 @@ const MotionDiv = styled(motion.div)`
   justify-content: start;
   align-items: center;
   text-align: center;
-  top: 137px;
+  top: 72px;
 
   h3 { display: none;}
 

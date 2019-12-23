@@ -36,7 +36,7 @@ const HamburgerStyles = styled.div`
     display: block;
     cursor: pointer;
     position: absolute;
-    z-index: 100000;
+    z-index: 1000;
     .bar1, .bar2, .bar3 {
       width: 35px;
       height: 5px;

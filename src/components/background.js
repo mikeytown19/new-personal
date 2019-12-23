@@ -21,13 +21,11 @@ h2 {
   color: white;
 }
 position: relative;
-padding: 30px 0;
-background: ${props =>
-   props.reverse ? gradient.reverse : gradient.default };
+background: ${props => props.reverse ? gradient.reverse : gradient.default };
 
-   ${media.small} {
-     padding: 0;
-   }
+${media.small} {
+  padding: 0;
+}
 `
 
 const GradientInsideWhite = styled.div`
